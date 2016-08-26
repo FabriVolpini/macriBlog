@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+    {% load staticfiles %}
+    
+    <head>
+        <title>Macri's Blog</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        <link type="text/css"  rel="stylesheet" href="cambiador.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    </head>
+    <body>
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+                    <div id="main">
+
+                    <!-- Post -->
+                            
+                        <form> 
+                            <div>
+                                <p align="center" class="normal">Nombre y Apellido:</p>
+                                <input type=text name="display" class="pant">
+                            </div>
+                            <div>
+                                <p align="center" class="normal">Tipo y Nro de documento</p>
+                                <input type=text name="display" class="pant">
+                            </div>
+                            <br> 
+                            <div>
+                                <p align="center" class="special">Ahora todo el trabajo lo hace el Programa recopilando tu informacion de multiples fuentes!!</p>
+                            </div>
+                            <br>
+                            <div align="center" id="one" onmouseover="chan(this)">
+                                <a href="">
+                                    <p>Crear Curriculum</p>
+                                </a>
+                            </div>
+                            <br><br>
+
+
+
+
+                        </form>
+
+                    </div>
+
+                    <!-- Sidebar -->
+                    <section id="sidebar">
+
+                        <!-- Intro -->
+                            <section id="intro">
+                                <a href="/" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
+                                <header>
+                                    <h2>Macri's Blog</h2>
+                                </header>
+                            </section>
+
+
+                </section>
+
+            </div>
+        <!-- Scripts -->
+            <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+            <script src="{% static 'assets/js/skel.min.js' %}"></script>
+            <script src="{% static 'assets/js/util.js' %}"></script>
+            <script src="{% static 'assets/js/main.js' %}"></script>
+            <script text="text/javascript">
+                function chan(){
+                    var x = Math.floor(Math.random()*1000);
+                    var y = Math.floor((Math.random()*1000)/2);
+                    x = x.toString()+"px";
+                    y = y.toString()+"px";
+                    document.getElementById("one").style.marginLeft = x;
+                    document.getElementById("one").style.marginTop = y;
+                }
+        </script> 
+
+    </body>
+</html>

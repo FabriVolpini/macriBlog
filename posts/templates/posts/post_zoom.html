@@ -1,0 +1,20 @@
+{% extends 'posts/base.html' %}
+
+
+    {% block content %}
+
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2>{{ post.titulo }}</h2>
+                </div>
+                {% if post.fechita %}
+                <div class="meta">
+                    <time class="published">{{ post.fechita }}</time>
+                </div>
+                {% endif %}
+            </header>
+            <p> {{ post.texto|linebreaksbr }} </p>
+        </article>
+
+    {% endblock %}

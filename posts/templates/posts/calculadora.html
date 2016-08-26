@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    {% load staticfiles %}
+
+    <head>
+        <title>Calculadora de Macri</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+    </head>
+    <body>
+        
+        <div id="wrapper">
+            <div id="main">
+                <form name="calcu" style="margin-top:2%">
+                    <div align="center" name="div">
+                        <div style="margin-left:35%; margin-right:35%">
+                            <input type=text name="display" class="pant" value="0">
+                        </div>
+                
+                        <div class="nro">   
+                            <input type=button value="1" onclick="calcu.display.value+='1'" class="waves-effect waves-light btn">
+                            <input type=button value="2" onclick="calcu.display.value+='2'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="3" onclick="calcu.display.value+='3'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="+" onclick="calcu.display.value+='+'" class="waves-effect waves-light btn" style="margin-left:1%">
+                    
+                        </div>
+                
+                       <div class="nro">
+                
+                            <input type=button value="4" onclick="calcu.display.value+='4'" class="waves-effect waves-light btn">
+                            <input type=button value="5" onclick="calcu.display.value+='5'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="6" onclick="calcu.display.value+='6'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="-" onclick="calcu.display.value+='-'" class="waves-effect waves-light btn" style="margin-left:1%">
+                    
+                        </div>
+                        <div class="nro">
+                    
+                            <input type=button value="7" onclick="calcu.display.value+='7'" class="waves-effect waves-light btn">
+                            <input type=button value="8" onclick="calcu.display.value+='8'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="9" onclick="calcu.display.value+='9'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="*" onclick="calcu.display.value+='*'" class="waves-effect waves-light btn" style="margin-left:1%">
+                    
+                        </div>
+                        <div class="nro">
+                    
+                            <input type=button value="C" onclick="calcu.display.value='0'" class="waves-effect waves-light btn">
+                            <input type=button value="0" onclick="calcu.display.value+='0'" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="=" onclick="calcu.display.value=eval(calcu.display.value)" class="waves-effect waves-light btn" style="margin-left:1%">
+                            <input type=button value="/" onclick="calcu.display.value+='/'" class="waves-effect waves-light btn" style="margin-left:1%">
+                    
+                
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+
+            <!-- Sidebar -->
+            <section id="sidebar">
+
+                <!-- Intro -->
+                <section id="intro">
+                    <a href="/" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
+                    <header>
+                        <h2>Macri's Blog</h2>
+                    </header>
+                </section>
+
+            </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </body>
+</html>

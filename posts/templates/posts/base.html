@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+	{% load staticfiles %}
+	
+	<head>
+		<title>Macri's Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+					<div id="main">
+
+					<!-- Post -->
+							
+						{% block content %}
+						{% endblock %}
+
+					</div>
+
+					<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								<a href="/" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
+								<header>
+									<h2>Macri's Blog</h2>
+								</header>
+							</section>
+
+							
+					<!-- Mini Posts -->
+					<section>
+						<div class="mini-posts">
+
+							<!-- Mini Post -->
+						<article class="mini-post">
+							<header>
+								<h3><a href="calculadora">Calculadora Cambiemos</a></h3>
+								<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+							</header>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+						</article>
+
+						<article class="mini-post">
+							<header>
+								<h3><a href="cronometro">Cronometro Cambiemos</a></h3>
+								<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+							</header>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+						</article>
+						
+						<article class="mini-post">
+							<header>
+								<h3><a href="conversor">Conversor Cambiemos</a></h3>
+								<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+							</header>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+						</article>
+
+						<article class="mini-post">
+							<header>
+								<h3><a href="chboton">Formulario K</a></h3>
+								<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+							</header>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+						</article>						
+
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+    {% load staticfiles %}
+
+    <head>
+        <title>Macri's Blog</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+                    <div id="main">
+
+                    <!-- Post -->
+                            
+                        <div id="ve">
+                            00:00:00
+                        </div>
+        
+                        <button onclick="qsy()">Start/Stop</button>
+        
+
+                    </div>
+
+                    <!-- Sidebar -->
+                    <section id="sidebar">
+
+                        <!-- Intro -->
+                            <section id="intro">
+                                <a href="/" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
+                                <header>
+                                    <h2>Macri's Blog</h2>
+                                </header>
+                            </section>
+
+                            
+                    <!-- Mini Posts -->
+                    <section>
+                        <div class="mini-posts">
+
+                            <!-- Mini Post -->
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="calculadora.html">Vitae sed condimentum</a></h3>
+                                <time class="published" datetime="2015-10-20">October 20, 2015</time>
+                                <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+                            </header>
+                            <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+                        </article>
+                        </div>
+                    </section>
+
+                </section>
+
+            </div>
+        <!-- Scripts -->
+            <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+            <script src="{% static 'assets/js/skel.min.js' %}"></script>
+            <script src="{% static 'assets/js/util.js' %}"></script>
+            <script src="{% static 'assets/js/main.js' %}"></script>
+            <script>
+                var n = 0;
+                var q = 0;
+                var w = 0;
+                var a;
+                var nose=false;
+                
+                function qsy(){
+                    if (nose==false){
+                        nose=true;
+                        a = setInterval(function min(){
+                        n = n + 1;
+                        if (n==100){
+                            q = q +1;
+                            n = 0;
+                            if (q==60){
+                                w = w + 1;
+                                q = 0;
+                                }
+                        }
+                    
+                        document.getElementById("ve").innerHTML = w + ":" + q +":"+ n;
+                    }, 1);
+                }
+                else {
+                    clearInterval(a);
+                    nose=false;
+                }
+            }
+           
+        </script>
+
+    </body>
+</html>
